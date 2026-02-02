@@ -27,6 +27,8 @@ This implementation leverages `std::async` and `std::future` to manage concurren
 * **C++ Compiler:** Requires C++17 support (GCC, Clang, or MSVC).
 * **CMake:** Version 3.10 or higher.
 
-### Installation
-Clone the repository and build using CMake:
+## Algorithm Details
+The Ladner-Fischer algorithm executes in two passes with O(n) work and O(log n) depth:
+* Up-Sweep (Reduce Phase): Builds a sum tree from the bottom up. Each internal node calculates the sum of its children. This phase is parallelized to allow concurrent summation of independent sub-blocks.
+* Down-Sweep (Distribute Phase): Traverses down the tree to compute the final prefix sums. Each node passes its accumulated "incoming sum" to its children.
 
