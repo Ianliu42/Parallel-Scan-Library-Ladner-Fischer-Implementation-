@@ -17,10 +17,7 @@ find_package(Threads REQUIRED)
 include_directories(include)
 
 # 5. 定義可執行檔
-add_executable(parallel_sum 
-    src/main.cpp 
-    src/ParallelPrefix.cpp
-)
+add_executable(parallel_sum src/main.cpp)
 
 # 6. 連結執行緒庫
 target_link_libraries(parallel_sum PRIVATE Threads::Threads)
