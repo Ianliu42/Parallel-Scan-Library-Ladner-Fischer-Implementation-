@@ -1,3 +1,6 @@
+
+
+
 /**
  * @file ParallelPrefix.hpp
  * @brief Template-based Parallel Prefix Sum (Ladner-Fischer) library.
@@ -8,6 +11,7 @@
 
 #include <vector>
 #include <future>
+namespace ParallelScan {
 
 /**
  * @class Heaper
@@ -106,4 +110,6 @@ public:
     }
 };
 
-#endif
+} // namespace ParallelScan
+
+#endif // PARALLEL_PREFIX_HPP
