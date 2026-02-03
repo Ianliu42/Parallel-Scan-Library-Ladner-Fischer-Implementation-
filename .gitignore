@@ -1,8 +1,5 @@
 build/
 .DS_Store
+.vscode/
 *.o
-<<<<<<< HEAD
 parallel_sum
-=======
-parallel_sum
->>>>>>> 4a712e979744f700710e03a82c113f18bc95d65d
