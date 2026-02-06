@@ -1,6 +1,3 @@
-
-
-
 /**
  * @file ParallelPrefix.hpp
  * @brief Template-based Parallel Prefix Sum (Ladner-Fischer) library.
@@ -49,6 +46,11 @@ public:
     inline int leafIdx(int i) const {
          return i - (m - 1); 
     }
+
+    inline int parent(int i) const {
+        return ((i-1)/2);
+    }
+    
 };
 
 /**
@@ -57,6 +59,7 @@ public:
  * @tparam T Numeric type (int, float, double, etc.)
  */
 template <typename T>
+
 class ParallelSum : public Heaper {
 private:
     const std::vector<T>* data;     // store the pointer of original data
